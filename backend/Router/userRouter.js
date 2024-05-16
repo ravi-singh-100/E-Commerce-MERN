@@ -1,0 +1,12 @@
+const {signin,signup, emailVerification,findUserById,deleteAddress, logoutController,resetPassword}=require('../Controllers/userController')
+const express=require('express')
+const{isAdmin,isCustomer,isAuth,isBoth}=require('../middlewares/auth')
+const router=express.Router()
+router.post('/sign-in',signin)
+router.post('/sign-up',signup)
+router.post('/email-verification',emailVerification)
+router.post('/reset-password/:id/:token',resetPassword)
+router.delete('/delete-address',isAuth,isCustomer,deleteAddress)
+router.get('/:id',isAuth,findUserById)
+router.get('/logout',isAuth,logoutController)
+module.exports=router
