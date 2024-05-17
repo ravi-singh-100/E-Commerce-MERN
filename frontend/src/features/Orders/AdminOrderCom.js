@@ -23,7 +23,7 @@ function AdminOrderCom({loading,orderHistory,title}) {
         e.preventDefault()
         // if(status==='') {return;}
 try{
-const response=await fetch('http://localhost:8000/api/v1/admin/change-status',{
+const response=await fetch('https://render.com/docs/web-services#port-binding/api/v1/admin/change-status',{
     method:'POST',
     headers:{
         Authorization:`Bearer ${userToken}`,

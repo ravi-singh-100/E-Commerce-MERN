@@ -9,7 +9,7 @@ function RemaingOrdersPage() {
     const [products,setProducts]=useState([])
     const[isLoading,setIsLoading]=useState(true)
     useEffect(()=>{
-fetch('http://localhost:8000/api/v1/admin/orderType?status=ordered',{
+fetch('https://render.com/docs/web-services#port-binding/api/v1/admin/orderType?status=ordered',{
     headers:{
         Authorization:`Bearer ${userToken}`
     }

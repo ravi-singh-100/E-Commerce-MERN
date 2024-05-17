@@ -17,7 +17,7 @@ setConfirmPassword(e.target.value)
 e.preventDefault()
 // console.log(password+" "+confirmPassword)
 try{
-    const response=await fetch(`http://localhost:8000/api/v1/user/reset-password/${id}/${token}`,{
+    const response=await fetch(`https://render.com/docs/web-services#port-binding/api/v1/user/reset-password/${id}/${token}`,{
         method:'POST',
         body:JSON.stringify({
             password:password,confirmPassword:confirmPassword

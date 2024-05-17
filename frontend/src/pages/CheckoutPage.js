@@ -95,7 +95,7 @@ const submitFormHandler=async(e)=>{
 useEffect(()=>{
   console.log('hit hua')
   // console.log('ifja hu')
-  fetch(`http://localhost:8000/api/v1/user/${userDetails._id}`,{
+  fetch(`https://render.com/docs/web-services#port-binding/api/v1/user/${userDetails._id}`,{
      headers:{ Authorization:`Bearer ${userToken}`}
   })
 .then((res)=>res.json()).then((data)=>{

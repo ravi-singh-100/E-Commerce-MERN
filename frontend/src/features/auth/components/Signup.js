@@ -25,7 +25,7 @@ otp:''
   const showOTPContentHandler=async(e)=>{
     e.preventDefault()
     try{
-    const response=await fetch('http://localhost:8000/api/v1/admin/send-otp',{
+    const response=await fetch('https://render.com/docs/web-services#port-binding/api/v1/admin/send-otp',{
       method:'POST',
       body:JSON.stringify(formData),
       headers:{
@@ -52,7 +52,7 @@ console.log(err)
 e.preventDefault()
 // console.log(formData)
 try{
-  const response=await fetch('http://localhost:8000/api/v1/user/sign-up',{
+  const response=await fetch('https://render.com/docs/web-services#port-binding/api/v1/user/sign-up',{
     method:'POST',
     body:JSON.stringify(formData),
     headers:{

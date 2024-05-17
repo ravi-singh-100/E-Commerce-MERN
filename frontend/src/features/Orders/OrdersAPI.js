@@ -3,7 +3,7 @@
 export const getAll=async(token)=>{
 return new Promise(async(ressolve,reject)=>{
     console.log(token)
-const response=await fetch('http://localhost:8000/api/v1/cart/getAllCart',{
+const response=await fetch('https://render.com/docs/web-services#port-binding/api/v1/cart/getAllCart',{
     headers:{
         Authorization:`Bearer ${token}`,
     }

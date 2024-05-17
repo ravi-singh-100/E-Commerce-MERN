@@ -32,7 +32,7 @@ const filterOptions=useSelector(filterOption)
       e.preventDefault()
       try{
         // console.log(formData)
-      const response=await fetch(`http://localhost:8000/api/v1/admin/add-new-product`,{
+      const response=await fetch(`https://render.com/docs/web-services#port-binding/api/v1/admin/add-new-product`,{
         method:'POST',
         headers:{
           Authorization:`Bearer ${userToken}`,

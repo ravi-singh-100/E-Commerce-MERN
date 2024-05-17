@@ -17,7 +17,7 @@ function AllOrdersPage() {
     const[isLoading,setIsLoading]=useState(true)
     const navigate=useNavigate()
     useEffect(()=>{
-fetch('http://localhost:8000/api/v1/admin/all-orders',{
+fetch('https://render.com/docs/web-services#port-binding/api/v1/admin/all-orders',{
     headers:{
         Authorization:`Bearer ${userToken}`
     }

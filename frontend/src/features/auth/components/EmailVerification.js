@@ -12,7 +12,7 @@ function EmailVerification() {
             const sendOTPHandler=async (e)=>{
                 e.preventDefault()
              try{
-        const response=await fetch('http://localhost:8000/api/v1/user/email-verification',{
+        const response=await fetch('https://render.com/docs/web-services#port-binding/api/v1/user/email-verification',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'

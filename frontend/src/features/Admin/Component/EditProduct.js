@@ -15,7 +15,7 @@ function EditProduct() {
  const undoDeleteProductHandler=async(e)=>{
   e.preventDefault()
   try{
-const res=await fetch(`http://localhost:8000/api/v1/admin/undo-delete-product/${id}`,{
+const res=await fetch(`https://render.com/docs/web-services#port-binding/api/v1/admin/undo-delete-product/${id}`,{
   method:'DELETE',
   headers:{
     Authorization:`Bearer ${userToken}`
@@ -39,7 +39,7 @@ console.log(err)
  const deleteProductHandler=async(e)=>{
   e.preventDefault()
   try{
-const res=await fetch(`http://localhost:8000/api/v1/admin/delete-product/${id}`,{
+const res=await fetch(`https://render.com/docs/web-services#port-binding/api/v1/admin/delete-product/${id}`,{
   method:'DELETE',
   headers:{
     Authorization:`Bearer ${userToken}`
@@ -99,7 +99,7 @@ const submitFormHandler=async(e)=>{
 console.log(formData)
 try{
   console.log(formData)
-const response=await fetch(`http://localhost:8000/api/v1/admin/edit-product/${id}`,{
+const response=await fetch(`https://render.com/docs/web-services#port-binding/api/v1/admin/edit-product/${id}`,{
   method:'PATCH',
   headers:{
     Authorization:`Bearer ${userToken}`,

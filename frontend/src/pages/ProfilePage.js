@@ -10,7 +10,7 @@ function ProfilePage() {
     const userToken=useSelector(token)
     useEffect(()=>{
         // console.log('ifja hu')
-        fetch(`http://localhost:8000/api/v1/user/${userDetails._id}`,{
+        fetch(`https://render.com/docs/web-services#port-binding/api/v1/user/${userDetails._id}`,{
            headers:{ Authorization:`Bearer ${userToken}`}
         })
     .then((res)=>res.json()).then((data)=>{
@@ -24,7 +24,7 @@ function ProfilePage() {
     const deleteAddress=async (addressId)=>{
     //   console.log(addressId)
       try{
-const response=await fetch(`http://localhost:8000/api/v1/user/delete-address?addressId=${addressId}&userId=${userDetails?._id}`,{
+const response=await fetch(`https://render.com/docs/web-services#port-binding/api/v1/user/delete-address?addressId=${addressId}&userId=${userDetails?._id}`,{
     headers:{
         Authorization:`Bearer ${userToken}`
     },

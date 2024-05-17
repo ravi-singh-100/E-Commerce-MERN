@@ -3,7 +3,7 @@
 //increase increaseQuantity
 export const increaseQuantity=(Token,product)=>{
     return new Promise(async(ressolve)=>{
-        const response=await fetch('http://localhost:8000/api/v1/cart/increase-quantity',{
+        const response=await fetch('https://render.com/docs/web-services#port-binding/api/v1/cart/increase-quantity',{
             method:'PUT',
             headers:{
                 Authorization:`Bearer ${Token}`,
@@ -20,7 +20,7 @@ export const removeCart=(id,token)=>{
     return new Promise(async(ressolve)=>{
         console.log(id)
         console.log(token)
-        const response=await fetch(`http://localhost:8000/api/v1/cart/remove-quantity/${id}`,{
+        const response=await fetch(`https://render.com/docs/web-services#port-binding/api/v1/cart/remove-quantity/${id}`,{
             method:'PUT',
             headers:{
                 Authorization:`Bearer ${token}`,
@@ -42,7 +42,7 @@ export const removeCart=(id,token)=>{
 export const cart=(token)=>{
   
     return new Promise(async(ressolve)=>{
-        const response=await fetch(`http://localhost:8000/api/v1/cart/initial-cart`,{
+        const response=await fetch(`https://render.com/docs/web-services#port-binding/api/v1/cart/initial-cart`,{
             headers:{
                 Authorization:`Bearer ${token}`,
                 'Content-Type':'application/json'
@@ -60,7 +60,7 @@ export const cart=(token)=>{
 export const updateCart=(item,totalQuantity,price,token)=>{
   
 return new Promise(async(ressolve)=>{
-    const response=await fetch (`http://localhost:8000/api/v1/cart/update-cart`,{
+    const response=await fetch (`https://render.com/docs/web-services#port-binding/api/v1/cart/update-cart`,{
         method:'PUT',
         body:JSON.stringify({item,totalQuantity,price}),
         headers:{
@@ -76,7 +76,7 @@ return new Promise(async(ressolve)=>{
 //order
 export const orderCart=(form,cartData,token)=>{
     return new Promise(async(ressolve)=>{
-        const response =await fetch('http://localhost:8000/api/v1/cart/order',{
+        const response =await fetch('https://render.com/docs/web-services#port-binding/api/v1/cart/order',{
             method:'POST',
             body:JSON.stringify({form,cartData}),
             headers:{

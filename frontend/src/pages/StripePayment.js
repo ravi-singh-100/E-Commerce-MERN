@@ -12,9 +12,9 @@ import {savedCart}from '../features/Cart/CartSlice'
 // recreating the Stripe object on every render.
 // This is your test publishable API key.
 import {cartOrderId} from '../features/Cart/CartSlice'
-const pk=process.env.REACT_APP_PK_KEY
-const stripePromise = loadStripe(pk);
-console.log('pk ',pk)
+// const pk=process.env.REACT_APP_PK_KEY
+const stripePromise = loadStripe('pk_test_51PGdYlSEmuRyAhgp5PnXMBBCqEAVTu3vS0ZIJYcNLpEVqIFXYTbVXTRJVhYDjhWrd7en4ns0Iz5p888dFfgZ2ZeK00KwoLIWNQ');
+// console.log('pk ',pk)
 function StripePayment() {
   const orderId=useSelector(cartOrderId)
   const cartData=useSelector(savedCart)
@@ -26,7 +26,7 @@ const totalPrice=useSelector(paymentAmount)
     useEffect(() => {
       console.log(userToken)
       // Create PaymentIntent as soon as the page loads
-      fetch("http://localhost:8000/api/v1/payment/create-payment-intent", {
+      fetch("https://render.com/docs/web-services#port-binding/api/v1/payment/create-payment-intent", {
         method: "POST",
         headers: { "Content-Type": "application/json" ,Authorization:`Bearer ${userToken}`},
         body: JSON.stringify({ cart:cartData}),

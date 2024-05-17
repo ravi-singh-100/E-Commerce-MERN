@@ -1,7 +1,7 @@
 //fetch all products without any filter
 export const fetchAllProducts=()=>{
     return new Promise( async (ressolve)=>{
-const response=await fetch('http://localhost:8080/products')
+const response=await fetch('https://render.com/docs/web-services#port-binding/products')
 const data=await response.json()
 ressolve({data})
     })
@@ -9,7 +9,7 @@ ressolve({data})
 //fetch sort options
 export const fetchSortOptions=()=>{
     return new Promise(async(ressolve)=>{
-        const response=await fetch('http://localhost:8000/api/v1/products/allsortoptions')
+        const response=await fetch('https://render.com/docs/web-services#port-binding/api/v1/products/allsortoptions')
         const val=await response.json()
         ressolve({data:val.data})
     })
@@ -17,7 +17,7 @@ export const fetchSortOptions=()=>{
 //fetch filter options
 export const fetchFilterOptions=()=>{
     return new Promise(async(ressolve)=>{
-        const response=await fetch('http://localhost:8000/api/v1/products/filters')
+        const response=await fetch('https://render.com/docs/web-services#port-binding/api/v1/products/filters')
         const val=await response.json()
         ressolve({data:val.data})
     })
@@ -26,7 +26,7 @@ export const fetchFilterOptions=()=>{
 export const fetchSelectedProductDetails=(id)=>{
 return new Promise(async(ressolve)=>{
   
-    const response=await fetch(`http://localhost:8000/api/v1/product/${id}`)
+    const response=await fetch(`https://render.com/docs/web-services#port-binding/api/v1/product/${id}`)
 const val=await response.json()
 
 val.data.discountPrice=Math.round(val.data.price-(val.data.discountPercentage*val.data.price)/100)
@@ -68,7 +68,7 @@ if(query.length>0){
 console.log(query)
     return new Promise( async (ressolve)=>{
       
- const response=await fetch(`http://localhost:8000/api/v1/getAllProducts?isAdmin:${isAdmin}&${query}`)
+ const response=await fetch(`https://render.com/docs/web-services#port-binding/api/v1/getAllProducts?isAdmin:${isAdmin}&${query}`)
  const val =await response.json()     
  
  

@@ -12,7 +12,7 @@ function DeliveredOrdersPage() {
   const dispatch=useDispatch()
     const[isLoading,setIsLoading]=useState(true)
     useEffect(()=>{
-fetch('http://localhost:8000/api/v1/admin/orderType?status=delivered',{
+fetch('https://render.com/docs/web-services#port-binding/api/v1/admin/orderType?status=delivered',{
     headers:{
         Authorization:`Bearer ${userToken}`
     }

@@ -9,7 +9,7 @@ function SignOutPage() {
     const dispatch=useDispatch()
     useEffect(()=>{
       if(userExsist){
-        fetch('http://localhost:8000/api/v1/user/logout',{
+        fetch('https://render.com/docs/web-services#port-binding/api/v1/user/logout',{
           headers:{
             Authorization:`Bearer ${userToken}`
           }
